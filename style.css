@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, rgba(0, 0, 0, 0) 20%), 
+                      radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0) 20%);
+}
+
+.door.selected {
+    box-shadow: 0 0 0 3px #10B981;
+    animation: pulse 1.5s infinite;
+}
+
+.door.correct {
+    background: linear-gradient(to bottom, #10B981, #047857);
+}
+
+.door.incorrect {
+    background: linear-gradient(to bottom, #EF4444, #B91C1C);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    opacity: 0.7;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
